@@ -1,0 +1,892 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+html {
+    word-break: keep-all;
+    font-weight: 400;
+    line-height: 160%;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body, h1, h2, p, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    padding: 0px;
+    margin-top: 0px;
+    box-sizing: border-box;
+}
+
+section {
+    margin-top: 200px;
+    padding-top: 0px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+}
+
+.wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: auto;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+ul,li{
+    list-style: none;
+}
+ul, li, a{
+    text-decoration: none;
+    display: block;
+    padding: 0px 5px;
+    color: rgb(171, 171, 171);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 32px;
+    margin: 15px 0;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: calc(100% - 80px);
+    max-width: 920px;
+}
+
+.header {
+    display: block;
+    padding-top: 90px;
+    margin-bottom: 200px;
+}
+
+.header img {
+    mix-blend-mode: hard-light;
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.header .text-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.header .text-container > div:first-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header h6 {
+    font-size: 11px;
+    font-weight: 400;
+    margin: 10px 0 0px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.header h1 {
+    text-align: left;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    padding-top: 24px;
+}
+
+.header p {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 1.5;
+    padding-top: 63px;
+}
+
+/* 전체 너비 섹션 공통 스타일 */
+.service-section,
+.dimension-start,
+.qa-section,
+.dimension-info,
+.dimension-features {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 100px 0;
+}
+
+/* 서비스 섹션 */
+.service-section {
+    background: white;
+    padding: 300px 0;
+    color: black;
+}
+
+.service-section .wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-tag {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.service-section p {
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 100px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.service-content {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.service-image {
+    flex: 1;
+    max-width: 400px;
+    mix-blend-mode: exclusion;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mix-blend-mode: multiply;
+}
+
+.service-text {
+    flex: 1;
+    padding-top: 40px;
+}
+
+.service-text h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: black;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    letter-spacing: -0.03em;
+}
+
+.service-text p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: -0.02em;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+    position: relative;
+    padding-top: 100px;
+}
+
+.movie-grid > div:last-child {
+    position: relative;
+    left: -50%;
+    grid-column: 2;
+}
+
+.movie-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 360px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.movie-info {
+    padding: 30px;
+}
+
+.movie-title {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+}
+
+.movie-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+}
+
+.rating h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+/* 차원 소개 섹션 스타일 */
+.dimension-intro {
+    margin-top: 200px;
+    background: black;
+    padding: 10px 0;
+}
+
+.dimension-intro h1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+}
+
+.dimension-intro h1 br + * {
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 4px;
+    display: inline-block;
+    letter-spacing: -0.03em;
+}
+
+/* 차원 시작 섹션 */
+.dimension-start {
+    background: white;
+    color: black;
+    padding: 100px 0;
+    text-align: left;
+}
+
+.dimension-start .wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.dimension-start p {
+    font-size: 28px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.intro-image {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.intro-image img {
+    width: 80%;
+    height: auto;
+    display: block;
+    mix-blend-mode: exclusion;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+/* Q&A 섹션 */
+.qa-section {
+    background-image: url('Group 8.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 200px 0;
+    color: white;
+}
+
+.qa-section .wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.qa-container {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 200px;
+}
+
+.qa-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 160px;
+}
+
+.qa-text h3 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    flex: 0 0 auto;
+    margin: 0;
+    width: 280px;
+}
+
+.qa-text p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: -0.02em;
+    flex: 1;
+    margin: 0;
+}
+
+.qa-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.qa-image img {
+    width: 160px;
+    height: auto;
+    mix-blend-mode: screen;
+}
+
+.qa-bottom {
+    text-align: center;
+    position: relative;
+    margin-top: 200px;
+}
+
+.qa-bottom p {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.02em;
+    margin-bottom: 160px;
+}
+
+.qa-bottom .qa-item {
+    background: white;
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.qa-bottom .qa-item::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: white;
+    border-radius: 50% 50% 0 0;
+}
+
+.qa-bottom .qa-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.qa-bottom .qa-text h3 {
+    color: black;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    flex: 0 0 auto;
+    width: 280px;
+}
+
+.qa-bottom .qa-text p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: -0.02em;
+    flex: 1;
+    margin: 0;
+}
+
+/* 차원 정보 섹션 */
+.dimension-info {
+    background: white;
+    color: black;
+    padding: 200px 0;
+    text-align: left;
+}
+
+.dimension-info .wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.dimension-info .dimension-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.dimension-info .dimension-label,
+.dimension-info .dimension-title {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.dimension-label {
+    display: block;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: lowercase;
+    margin-bottom: 20px;
+}
+
+.dimension-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 60px;
+}
+
+.dimension-grid {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.dimension-grid img {
+    width: 350px;
+    height: auto;
+}
+
+.dimension-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.8);
+    padding-top: 20px;
+    letter-spacing: -0.02em;
+    flex: 1;
+ 
+}
+
+/* 차원 특징 섹션 */
+.dimension-features {
+    position: relative;
+    background: white;
+    color: black;
+    padding: 100px 0;
+}
+
+.dimension-features .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.dimension-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.dimension-text-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+    padding-bottom: 100px;
+    margin-left: 0;
+}
+
+.morph-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(100px, -50%); /* 중앙에서 오른쪽으로 100px 이동 */
+    width: 500px;
+    height: 500px;
+    z-index: 100;
+}
+
+.features-label {
+    display: block;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: lowercase;
+    margin-bottom: 20px;
+}
+
+.features-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
+.dimension-text {
+    padding: 20px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+    border-radius: 20px;
+}
+
+.dimension-text.active {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.dimension-text h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 24px;
+}
+
+.dimension-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+    word-break: keep-all;
+}
+
+/* 공통 .shape 기본스타일 */
+.css-morph {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shape {
+    position: absolute;
+    background: #000;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+
+/* 0차원: 점 */
+.shape.point {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+}
+
+/* 1차원: 선 (너비만 늘림) */
+.shape.line {
+    width: 0;
+    height: 2px;
+    transform-origin: center;
+}
+
+/* 2차원: 면 (정사각형) */
+.shape.plane {
+    width: 0;
+    height: 0;
+    transform-origin: center;
+}
+
+/* 차원별 활성화 */
+.morph-0d .shape.point {
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+}
+
+.morph-1d .shape.point {
+    opacity: 0;
+}
+
+.morph-1d .shape.line {
+    width: 200px;
+    opacity: 1;
+}
+
+.morph-2d .shape.line {
+    opacity: 0;
+}
+
+.morph-2d .shape.plane {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+}
+
+/* three.js 캔버스 */
+#three-canvas {
+    position: absolute;
+    inset: 0;
+    display: none;
+}
+
+.morph-3d #three-canvas,
+.morph-4d #three-canvas {
+    display: block;
+}
+
+/* 캔버스 위에 CSS-shape 가려지지 않게 레이어 순서 조정 */
+.morph-3d .css-morph,
+.morph-4d .css-morph {
+    display: none;
+}
+
+.scroll-progress {
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-progress.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.progress-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-dot.active {
+    background: #000;
+    transform: scale(1.5);
+}
+
+.progress-dot:hover {
+    transform: scale(1.2);
+}
+
+.progress-dot.active:hover {
+    transform: scale(1.5);
+}
+
+.progress-label {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.progress-dot:hover .progress-label {
+    opacity: 1;
+    right: 28px;
+}
+
+.scroll-indicator {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+}
+
+.scroll-indicator::after {
+    content: '';
+    width: 20px;
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    position: relative;
+}
+
+.scroll-indicator::before {
+    content: '';
+    width: 2px;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 8px;
+    animation: scrollIndicator 1.5s infinite;
+}
+
+@keyframes scrollIndicator {
+    0% {
+        transform: translateY(-8px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+.dimension-text[data-dimension="4"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.dimension-text[data-dimension="4"].active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 테서랙트 스타일 */
+.tesseract-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 회전 애니메이션 */
+@keyframes rotateAnimation {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+/* 4차원 w축 회전 */
+@keyframes wAxisRotation {
+    0% {
+        transform: scale(0.7) rotateX(0) rotateY(0);
+    }
+    50% {
+        transform: scale(1) rotateX(180deg) rotateY(180deg);
+    }
+    100% {
+        transform: scale(0.7) rotateX(360deg) rotateY(360deg);
+    }
+}
